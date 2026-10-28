@@ -18,7 +18,7 @@ const Footer = ({audioRef,
      const myRef = {};
      
   return (
-    <div className=''>
+    <div className='h-[17vh'>
         
         
         <div className="border  
