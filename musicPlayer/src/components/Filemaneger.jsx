@@ -8,7 +8,7 @@ const Filemaneger = ({
   error,
 }) => {
   return (
-   <div className="ml-4 h-120 w-1/3 shrink-0 overflow-y-auto border border-amber-50">
+   <div className=" h-[74vh] w-1/3 shrink-0 overflow-y-auto border border-amber-50">
       <div className="flex flex-col items-center gap-4 p-4">
         <h1 className="font-bold text-[#61e1d6]">File</h1>
 

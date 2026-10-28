@@ -2,25 +2,14 @@
 import React from "react";
 
 const Player = ({
-  audioRef,
-  songs,
-  currentIndex,
-  isPlaying,
-  setIsPlaying,
-  currentTime,
-  setCurrentTime,
-  duration,
-  setDuration,
-  volume,
-  setVolume,
-  togglePlay,
-  nextSong,
-  previousSong,
+
 }) => {
-  const currentSong = songs[currentIndex];
+  
 
   return (
-    <div className="ml-2 h-120 min-w-0 w-full border border-amber-50">
+    <>
+
+    <div className=" h-[74vh] min-w-0 w-full border border-amber-50">
       <h1 className="ml-2 mt-4 font-bold text-[#61e1d6]">
         Player
       </h1>
@@ -60,56 +49,10 @@ const Player = ({
         </svg>
       </div>
 
-      <div className=" text-center text-[#61e1d6]">
-        <h2 className="truncate px-4 text-lg font-semibold">
-          {currentSong?.name || "Select a song"}
-        </h2>
-      </div>
+     
+      
 
-       <div className="mt-10 flex flex-wrap items-center justify-center gap-3 px-3">
-        <button
-          onClick={previousSong}
-          disabled={!songs.length}
-          className="rounded p-2 text-[#61e1d6] disabled:opacity-40"
-          aria-label="Previous song"
-        >
-          |◀
-        </button>
-
-        <button
-          onClick={togglePlay}
-          disabled={!songs.length}
-          className="rounded p-2 text-[#61e1d6] disabled:opacity-40"
-          aria-label={isPlaying ? "Pause" : "Play"}
-        >
-          {isPlaying ? "❚❚" : "▶"}
-        </button>
-
-        <button
-          onClick={nextSong}
-          disabled={!songs.length}
-          className="rounded p-2 text-[#61e1d6] disabled:opacity-40"
-          aria-label="Next song"
-        >
-          ▶|
-        </button> 
-      </div>
-
-      <div className="invisible h-1 w-1 mx-auto    px-3">
-        <audio
-          ref={audioRef}
-          controls
-          preload="metadata"
-          className="max-w-full"
-          onPlay={() => setIsPlaying(true)}
-          onPause={() => setIsPlaying(false)}
-          onTimeUpdate={(e) => setCurrentTime(e.currentTarget.currentTime)}
-          onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
-          onEnded={nextSong}
-        />
-      </div>
-
-      <div className="mx-auto mt-1 flex max-w-xs items-center gap-3 px-4">
+      {/* <div className="mx-auto mt-1 flex max-w-xs items-center gap-3 px-4">
         <label htmlFor="volume" className="text-sm text-[#61e1d6]">
           Volume
         </label>
@@ -123,8 +66,11 @@ const Player = ({
           onChange={(e) => setVolume(Number(e.target.value))}
           className="w-full accent-[#61e1d6]"
         />
-      </div>
+      </div> */}
     </div>
+       
+
+    </>
   );
 };
 

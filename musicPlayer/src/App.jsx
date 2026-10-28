@@ -1,7 +1,7 @@
 
 import React from "react";
 import Navbar from "./components/Navbar";
-
+import Footer from "./components/Footer";
 import Filemaneger from "./components/Filemaneger";
 import useMusicPlayer from "./useMusicPlayer";
 import Player from "./components/Player";
@@ -20,7 +20,7 @@ const App = () => {
     <div>
       <Navbar />
 
-      <div className="mt-10 mr-4 flex">
+      <div className="  flex">
         <Filemaneger
           songs={music.songs}
           currentIndex={music.currentIndex}
@@ -28,9 +28,16 @@ const App = () => {
           chooseMusicFolder={music.chooseMusicFolder}
           error={music.error}
         />
-
+          <div className="w-full ">
         <Player
-          audioRef={music.audioRef}
+          
+        />
+
+        </div>
+      </div>
+   <Footer
+   
+   audioRef={music.audioRef}
           songs={music.songs}
           currentIndex={music.currentIndex}
           isPlaying={music.isPlaying}
@@ -44,8 +51,8 @@ const App = () => {
           togglePlay={music.togglePlay}
           nextSong={music.nextSong}
           previousSong={music.previousSong}
-        />
-      </div>
+   />
+       
     </div>
   );
 };

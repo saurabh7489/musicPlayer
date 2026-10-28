@@ -58,7 +58,7 @@ async function getFolderHandle() {
   });
 }
 
-export default function useMusicPlayer() {
+function useMusicPlayer() {
   const audioRef = useRef(null);
   const songsRef = useRef([]);
 
@@ -303,3 +303,5 @@ export default function useMusicPlayer() {
     previousSong,
   };
 }
+
+export default useMusicPlayer;
